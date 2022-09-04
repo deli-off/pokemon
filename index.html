@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokemon</title>
-    <link rel="stylesheet" href="./css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <div class="img text-center">
-      <img
-        class="m-5"
-        src="./img/img/pokemon_logo.png"
-        width="400px"
-        alt="pokemon_logo"
-      />
-    </div>
-    <form class="text-center" data-form>
-      <label for="img"></label>
-      <input
-        class="el-input"
-        id="img"
-        data-img
-        type="text"
-        placeholder="Img url"
-      />
-      <label for="name"></label>
-      <input
-        class="el-input"
-        id="name"
-        data-name
-        type="text"
-        placeholder="Name"
-      />
-      <label for="type"></label>
-      <input
-        class="el-input"
-        id="type"
-        data-type
-        type="text"
-        placeholder="Type"
-      />
-      <label for="weight"></label>
-      <input
-        class="el-input"
-        id="weight"
-        data-weight
-        type="text"
-        placeholder="Weight"
-      />
-      <label for="height"></label>
-      <input
-        class="el-input"
-        id="height"
-        data-height
-        type="text"
-        placeholder="Height"
-      />
-      <button class="el-btn bg-white">Add+</button>
-    </form>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
 
-    <div data-div-wrap class="wrap d-flex">
-      
-    </div>
+  <form action="#" class="form">
+    <label for="img"></label>
+    <input type="text" placeholder="Img" class="el-input">
 
-    <script src="./js/pokemon.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+    <label for="Name"></label>
+    <input type="text" placeholder="Name" class="el-input">
+
+    <label for="Type"></label>
+    <input type="text" placeholder="Type" class="el-input">
+
+    <label for="Weight"></label>
+    <input type="text" placeholder="Weight" class="el-input">
+
+    <label for="Height"></label>
+    <input type="text" placeholder="Height" class="el-input">
+    <button type="submit" class="btn">Add+</button>
+  </form>
+
+  <div class="container">
+     <ul class="pokemons" data-list>
+
+    </ul>
+  </div>
+  
+
+
+  <script src="./js/pokemon.js"></script>
+  <script src="./js/main.js"></script>
+</body>
 </html>
