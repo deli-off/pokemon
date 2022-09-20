@@ -61,7 +61,6 @@ function createDiv(pokemon) {
   elSpan.textContent = `${pokemon.weight}`;
   elSpan1.textContent = `${pokemon.height}`;
   elBtn.textContent = "Delate";
-
   elDivCard.classList.add("card");
   elImg.classList.add("card-img-top");
   elDivBody.classList.add("card-body");
