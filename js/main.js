@@ -95,9 +95,9 @@ function joinArray(arr, separator = "") {
 
 elInputSearch.addEventListener("keyup", (evt) => {
   var newNames = []
-  pokemons.forEach((name) => {
+  pokemons.forEach((pokemon) => {
     if (pokemons.name.includes(elInputSearch.value)) {
-      newNames.push(name)
+      newNames.push(pokemons)
     }
   })
 
