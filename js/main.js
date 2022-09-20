@@ -103,4 +103,3 @@ elInputSearch.addEventListener("keyup", (evt) => {
 
   renderPokemons(newNames)
 })
-
