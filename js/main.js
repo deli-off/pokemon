@@ -33,15 +33,27 @@ elForm.addEventListener("submit", function (evt) {
   elDivWrap.prepend(createDiv(pokemon));
 });
 
-renderPokemons();
+renderPokemons(pokemons);
 
-function renderPokemons() {
-  for (var i = 0; i < pokemons.length; i++) {
-    var pokemon = pokemons[i];
+function renderPokemons(pPokemons) {
+  elDivWrap.innerHTML = ""
+  for (var i = 0; i < pPokemons.length; i++) {
+    var pokemon = pPokemons[i];
 
     elDivWrap.append(createDiv(pokemon));
   }
 }
+
+elInputSearch.addEventListener("keyup", (evt) => {
+  var newPokemons = [];
+  pokemons.forEach((pokemon) => {
+    if (pokemon.name.includes(elInputSearch.value)) {
+      newPokemons.push(pokemon)
+    }
+  })
+
+  renderPokemons(newPokemons)
+})
 
 function createDiv(pokemon) {
   var elDivCard = document.createElement("div");
@@ -91,14 +103,3 @@ function joinArray(arr, separator = "") {
   }
   return str;
 }
-
-elInputSearch.addEventListener("keyup", (evt) => {
-  var newNames = []
-  pokemons.forEach((pokemon) => {
-    if (pokemons.name.includes(elInputSearch.value)) {
-      newNames.push(pokemons)
-    }
-  })
-
-  renderPokemons(newNames)
-})
